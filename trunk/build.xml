@@ -1,0 +1,14 @@
+<project default="wsimport">
+	<target name="wsgen">
+	<exec executable="wsgen">
+		<arg line="-cp ./bin -keep -s ./WebServices -d ./bin
+			it.lmpetrella.tutorial.webservices.wsServer.SayHello -wsdl"/>
+	</exec>
+	</target>
+	<target name="wsimport">
+	<exec executable="wsimport">
+	<arg line="-keep -s ./WebServices -p it.lmpetrella.tutorial.webservices.wsClient
+		-d ./bin http://localhost:8080/wsServerExample?wsdl"/>
+		</exec>
+		</target>
+</project>

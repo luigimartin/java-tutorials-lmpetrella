@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="JavaTutorials">
+        <wb-resource deploy-path="/" source-path="/DesignPattern/Behavioral"/>
+        <wb-resource deploy-path="/" source-path="/DesignPattern/Creational"/>
+        <wb-resource deploy-path="/" source-path="/DesignPattern/Structural"/>
+        <wb-resource deploy-path="/" source-path="/WebServices"/>
+    </wb-module>
+</project-modules>
