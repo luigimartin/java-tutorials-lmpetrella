@@ -8,7 +8,7 @@ import org.reflections.Reflections;
 public class DynamicCarFactory {
 
 	public static AbstractCar buildCar(CarModels _model) {
-		String packageName = "it.lmpetrella.tutorial.lab.dynamicfactory";
+		String packageName = DynamicCarFactory.class.getPackage().getName();
 
 		Reflections reflections = new Reflections(packageName);
 
