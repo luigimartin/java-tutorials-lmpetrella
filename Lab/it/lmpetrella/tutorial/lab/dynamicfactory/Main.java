@@ -6,10 +6,11 @@ public class Main {
 
 		System.out.println("Using switch-based factory");
 
-		AbstractCar car1 = SwitchBasedCarFactory.buildCar(CarModels.Ferrari);
-		AbstractCar car2 = SwitchBasedCarFactory
+		SwitchBasedCarFactory switchBasedCarFactory= new SwitchBasedCarFactory();
+		AbstractCar car1 = switchBasedCarFactory.buildCar(CarModels.Ferrari);
+		AbstractCar car2 = switchBasedCarFactory
 				.buildCar(CarModels.Lamborghini);
-		AbstractCar car3 = SwitchBasedCarFactory.buildCar(CarModels.Maserati);
+		AbstractCar car3 = switchBasedCarFactory.buildCar(CarModels.Maserati);
 		car1.drive();
 		car2.drive();
 
@@ -21,9 +22,10 @@ public class Main {
 
 		System.out.println("Using dynamic factory");
 
-		AbstractCar car4 = DynamicCarFactory.buildCar(CarModels.Ferrari);
-		AbstractCar car5 = DynamicCarFactory.buildCar(CarModels.Lamborghini);
-		AbstractCar car6 = DynamicCarFactory.buildCar(CarModels.Maserati);
+		DynamicCarFactory dynamicCarFactory= new DynamicCarFactory();
+		AbstractCar car4 = dynamicCarFactory.buildCar(CarModels.Ferrari);
+		AbstractCar car5 = dynamicCarFactory.buildCar(CarModels.Lamborghini);
+		AbstractCar car6 = dynamicCarFactory.buildCar(CarModels.Maserati);
 		car4.drive();
 		car5.drive();
 		car6.drive();

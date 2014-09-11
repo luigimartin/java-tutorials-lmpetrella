@@ -1,8 +1,8 @@
 package it.lmpetrella.tutorial.lab.dynamicfactory;
 
-public class SwitchBasedCarFactory {
+public class SwitchBasedCarFactory implements CarFactoryIF{
 
-	public static AbstractCar buildCar(CarModels model) {
+	public AbstractCar buildCar(CarModels model) {
 
 		switch (model) {
 		case Ferrari:
