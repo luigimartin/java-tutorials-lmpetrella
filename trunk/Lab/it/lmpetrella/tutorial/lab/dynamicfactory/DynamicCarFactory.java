@@ -5,9 +5,9 @@ import java.util.Set;
 
 import org.reflections.Reflections;
 
-public class DynamicCarFactory {
+public class DynamicCarFactory implements CarFactoryIF{
 
-	public static AbstractCar buildCar(CarModels _model) {
+	public AbstractCar buildCar(CarModels _model) {
 		String packageName = DynamicCarFactory.class.getPackage().getName();
 
 		Reflections reflections = new Reflections(packageName);
