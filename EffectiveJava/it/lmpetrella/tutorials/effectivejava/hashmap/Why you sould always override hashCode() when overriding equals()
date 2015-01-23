@@ -1,0 +1,14 @@
+Job Interview
+
+Q: Why you should always override hashCode() when you override equals() method?
+
+R: Because otherwise strange things happen!
+In this example we created 3 pojo with one attribute
+For the first one neither equals() and hashCode() were overridden
+For the second only equals() was overridden
+For the third, both equals() and hashCode() were overridden
+
+Trying to insert them into an hashMap structure and then retrieving the corresponding key (passing a new pojo with the same attribute value) we will succeed only in the third case, because:
+1-calling equals() for the first pojo always return false
+2-the second pojo violates the hashCode() contract requiring that hasCode() return the same values for objects which "are" equals()
+
