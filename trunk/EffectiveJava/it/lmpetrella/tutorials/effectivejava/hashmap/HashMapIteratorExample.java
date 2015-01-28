@@ -24,8 +24,7 @@ public class HashMapIteratorExample {
 		  Integer key = keySetIterator.next();
 		  System.out.println("key: " + key + " value: " + map.get(key));
 		}
-		
-		System.out.println("key: " + 99997 + " value: " + map.get(99997));
+
 
 	}
 
